@@ -55,8 +55,8 @@ function permute() {
     let  k= 1;
     for (let liczbaCyfr = 1; liczbaCyfr <= s; liczbaCyfr++) {
         for (let j=liczbaCyfr-1; j<s;j++) {
-            let baza = input.substring(j,j+liczbaCyfr);
-            retArr[retArr.length] = workX(baza,input,j);
+            let baza = input.substring(j,j+liczbaCyfr-1);
+            retArr[retArr.length] = workX(baza,input,j+1);
         };
     };
 
