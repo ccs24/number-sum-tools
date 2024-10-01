@@ -25,10 +25,13 @@ function sumX(tableX) {
 
 
 function workX(baza,input,start) {
+  let retArr = [];
     for(let i=start;i<input.length;i++) {
         w = baza + input.substring(i,i+1);
+      retArr[] = w;
         console.log(sumX(w),w);
     }
+  return retArr;
 }
 
 function permute() {
@@ -43,18 +46,18 @@ console.log(input);
 
     console.log(sumX(input),input);
 
+    let retArr = [];
     let  k= 1;
     for (let liczbaCyfr = 0; liczbaCyfr < s; liczbaCyfr++) {
         for (let j=i; j<s-liczbaCyfr;j++) {
             let baza = input.substring(j,j+liczbaCyfr);
-            workX(baza,input,j);
+            retArr[] = workX(baza,input,j);
           console.log(baza, j);
         };
     };
 
 //return
 document.getElementById("result").innerHTML = returnArr;
-console.log(returnArr);
 
 };
 
