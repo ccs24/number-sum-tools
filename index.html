@@ -54,6 +54,7 @@ function permute() {
       console.log("Liczba Cyfr",liczbaCyfr, s);
 
         for (let j=i; j<s-liczbaCyfr;j++) {
+          console.log("i j",i, j);
             let baza = input.substring(j,j+liczbaCyfr);
             retArr[retArr.length] = workX(baza,input,j);
           console.log("baza + j",baza, j);
