@@ -53,8 +53,8 @@ function permute() {
 
     let retArr = [];
     let  k= 1;
-    for (let liczbaCyfr = 0; liczbaCyfr < s; liczbaCyfr++) {
-        for (let j=liczbaCyfr; j<s;j++) {
+    for (let liczbaCyfr = 1; liczbaCyfr <= s; liczbaCyfr++) {
+        for (let j=liczbaCyfr-1; j<s;j++) {
             let baza = input.substring(j,j+liczbaCyfr);
             retArr[retArr.length] = workX(baza,input,j);
         };
