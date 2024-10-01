@@ -3,7 +3,7 @@
   <html lang="pl">
     <head>
 
-  <title>Sudoku Tools</title>
+  <title>Number Sums Tools</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -35,8 +35,8 @@ function permute() {
   let total = document.getElementById("total").value; 
   let input = document.getElementById("input").value; 
   let expectedsum = document.getElementById("size").value; 
-//console.log(total);
-//console.log(size);
+console.log(total);
+console.log(input);
     
 
     let chars = input.split("");
@@ -49,23 +49,22 @@ function permute() {
         for (let j=i; j<s-liczbaCyfr;j++) {
             let baza = input.substring(j,j+liczbaCyfr);
             workX(baza,input,j);
+          console.log(baza, j);
         };
     };
-};
-
-//console.log(permute('1234'));
-
-  //calcualte
-returnArr =   permute();
 
 //return
 document.getElementById("result").innerHTML = returnArr;
 console.log(returnArr);
 
-  
-if (new Date().getHours() < 18) {
-  document.getElementById("demo").innerHTML = "Good day!";
-}
+};
+
+//console.log(permute('1234'));
+
+  //calcualte
+//returnArr =   permute();
+
+
 </script>
 
       
@@ -95,7 +94,7 @@ if (new Date().getHours() < 18) {
     <div class="row">
     <div class="col">
         <div class="form-group mb-2">
-          <input type="button" onclick="resetKnown()" class="btn btn-light  btn-sm" value="reset">
+          <input type="button" onclick="reset()" class="btn btn-light  btn-sm" value="reset">
           <input type="button" onclick="permute()" class="btn btn-primary" value="Calculate!">
         </div>
     </div>
