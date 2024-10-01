@@ -3,7 +3,7 @@
   <html lang="pl">
     <head>
 
-          <title>Sudoku Tools</title>
+  <title>Sudoku Tools</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -31,7 +31,14 @@ function workX(baza,input,start) {
     }
 }
 
-function permute(input) {
+function permute() {
+  let total = document.getElementById("total").value; 
+  let input = document.getElementById("input").value; 
+  let expectedsum = document.getElementById("size").value; 
+//console.log(total);
+//console.log(size);
+    
+
     let chars = input.split("");
     let s = chars.length;
 
@@ -46,7 +53,14 @@ function permute(input) {
     };
 };
 
-console.log(permute('1234'));
+//console.log(permute('1234'));
+
+  //calcualte
+returnArr =   permute();
+
+//return
+document.getElementById("result").innerHTML = returnArr;
+console.log(returnArr);
 
   
 if (new Date().getHours() < 18) {
@@ -73,8 +87,8 @@ if (new Date().getHours() < 18) {
     </div>
     <div class="col">
         <div class="form-group  mx-sm-3 mb-2">
-            <label for="total">Input</label>
-            <input type="text" name="total" id="total" value="1" class="form-control  form-control-lg" ><br>
+            <label for="size">Input</label>
+            <input type="text" name="input" id="input"  class="form-control  form-control-lg" ><br>
         </div>
     </div>
     </div>
