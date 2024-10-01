@@ -27,11 +27,14 @@ function sumX(tableX) {
 function workX(baza,input,start) { //"przewija jedną cyfrę od startu do końca input
   let retArr = [];
   let w = '';
+    console.log("baza start",baza,start);
   
     for(let i=start;i<input.length;i++) {
-        w = baza + input.substring(i,i+1);
+        r = input.substring(i,i+1);
+        w = baza + r;
+        console.log("w r",w,r);
         retArr[retArr.length] = w;
-        console.log("work",sumX(w),w);
+//        console.log("work",sumX(w),w);
     }
   return retArr;
 }
@@ -50,15 +53,10 @@ function permute() {
 
     let retArr = [];
     let  k= 1;
-    for (let liczbaCyfr = 1; liczbaCyfr < s; liczbaCyfr++) {
-//      console.log("Liczba Cyfr",liczbaCyfr, s);
-
+    for (let liczbaCyfr = 0; liczbaCyfr < s; liczbaCyfr++) {
         for (let j=liczbaCyfr; j<s-liczbaCyfr;j++) {
-          console.log("liczbaCyfr j",liczbaCyfr, j);
             let baza = input.substring(j,j+liczbaCyfr);
-          console.log("baza",baza);
             retArr[retArr.length] = workX(baza,input,j);
-          //console.log("baza + j",baza, j);
         };
     };
 
