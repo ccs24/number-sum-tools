@@ -51,6 +51,8 @@ console.log("input",input);
     let retArr = [];
     let  k= 1;
     for (let liczbaCyfr = 0; liczbaCyfr < s; liczbaCyfr++) {
+      console.log("Liczba Cyfr",liczbaCyfr, s);
+
         for (let j=i; j<s-liczbaCyfr;j++) {
             let baza = input.substring(j,j+liczbaCyfr);
             retArr[retArr.length] = workX(baza,input,j);
