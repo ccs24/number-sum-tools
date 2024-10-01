@@ -24,9 +24,9 @@ function sumX(tableX) {
 }
 
 
-function workX(baza,input,start) {
+function workX(baza,input,start) { //"przewija jedną cyfrę od startu do końca input
   let retArr = [];
-  let w='';
+  let w = '';
   
     for(let i=start;i<input.length;i++) {
         w = baza + input.substring(i,i+1);
@@ -39,14 +39,14 @@ function workX(baza,input,start) {
 function permute() {
   let total = document.getElementById("total").value; 
   let input = document.getElementById("input").value; 
-console.log("total",total);
-console.log("input",input);
+// console.log("total",total);
+// console.log("input",input);
     
 
     let chars = input.split("");
     let s = chars.length;
 
-    console.log("first",sumX(input),input);
+   // console.log("first",sumX(input),input);
 
     let retArr = [];
     let  k= 1;
