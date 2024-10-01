@@ -29,7 +29,7 @@ function workX(baza,input,start) {
     for(let i=start;i<input.length;i++) {
         w = baza + input.substring(i,i+1);
       retArr[] = w;
-        console.log(sumX(w),w);
+        console.log("work",sumX(w),w);
     }
   return retArr;
 }
@@ -37,14 +37,14 @@ function workX(baza,input,start) {
 function permute() {
   let total = document.getElementById("total").value; 
   let input = document.getElementById("input").value; 
-console.log(total);
-console.log(input);
+console.log("total",total);
+console.log("input",input);
     
 
     let chars = input.split("");
     let s = chars.length;
 
-    console.log(sumX(input),input);
+    console.log("first",sumX(input),input);
 
     let retArr = [];
     let  k= 1;
@@ -52,16 +52,17 @@ console.log(input);
         for (let j=i; j<s-liczbaCyfr;j++) {
             let baza = input.substring(j,j+liczbaCyfr);
             retArr[] = workX(baza,input,j);
-          console.log(baza, j);
+          console.log("baza + j",baza, j);
         };
     };
 
 //return
-document.getElementById("result").innerHTML = returnArr;
-
+document.getElementById("result").innerHTML = retArr;
+console.log('return',retArr);
+  
 };
 
-//console.log(permute('1234'));
+console.log(permute('1234'));
 
   //calcualte
 //returnArr =   permute();
@@ -89,7 +90,7 @@ document.getElementById("result").innerHTML = returnArr;
     <div class="col">
         <div class="form-group  mx-sm-3 mb-2">
             <label for="size">Input</label>
-            <input type="text" name="input" id="input"  class="form-control  form-control-lg" ><br>
+            <input type="text" name="input" id="input"  value ="1234" class="form-control  form-control-lg" ><br>
         </div>
     </div>
     </div>
