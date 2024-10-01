@@ -26,9 +26,11 @@ function sumX(tableX) {
 
 function workX(baza,input,start) {
   let retArr = [];
+  let w='';
+  
     for(let i=start;i<input.length;i++) {
         w = baza + input.substring(i,i+1);
-      retArr[] = w;
+        retArr[retArr.length] = w;
         console.log("work",sumX(w),w);
     }
   return retArr;
@@ -51,7 +53,7 @@ console.log("input",input);
     for (let liczbaCyfr = 0; liczbaCyfr < s; liczbaCyfr++) {
         for (let j=i; j<s-liczbaCyfr;j++) {
             let baza = input.substring(j,j+liczbaCyfr);
-            retArr[] = workX(baza,input,j);
+            retArr[retArr.length] = workX(baza,input,j);
           console.log("baza + j",baza, j);
         };
     };
